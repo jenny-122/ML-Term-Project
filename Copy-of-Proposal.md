@@ -17,7 +17,6 @@
     a.	NumPy: For numerical computations and data manipulation.
     b.	Pandas: For data manipulation, cleaning, and analysis.
     c.	Scikit-learn (sklearn): For implementing machine learning models and performance evaluation.
-    d.	PyTorch: If deep learning models are considered for prediction tasks.
 7.	Group Members: Jenny Dinh (solo)
 
 ## Milestones:
