@@ -1,8 +1,9 @@
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import os
 
 # initialize file names
-f1 = 'dataset1.csv' # electrons
+f1 = 'dataset1-pre.csv' # electrons
 f2 = 'dataset2.csv' #
 f3 = 'dataset3.csv' #
 
@@ -41,3 +42,18 @@ df2 = load_df(f2, df2, 'df2')
 df3 = load_df(f3, df3, 'df3')
 
 df_list = [df1, df2, df3]
+
+sample_size = 5000
+sampled_df1 = df1.sample(sample_size, random_state=42)
+
+# Define the filename
+filename = 'dataset1.csv'
+
+dir = os.getcwd()
+
+# Write DataFrame to CSV file in the specified directory
+file_path = os.path.join(dir, filename)
+sampled_df1.to_csv(file_path, index=False)
+
+# Print the path where the CSV file was saved
+print("CSV file saved at:", file_path)
